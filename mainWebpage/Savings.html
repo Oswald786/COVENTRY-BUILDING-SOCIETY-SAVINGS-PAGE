@@ -5,7 +5,7 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="css/main.css"/>
-        <script href="javascript/JavascriptMain.js"></script>
+        <script src="javascript/JavascriptMain.js"></script>
     </head>
     <body style="width: 95;">
         <header>
@@ -65,8 +65,67 @@
         </div>
         <img class="fscsImage" src="images/image copy 2.png" alt="Fscs protection logo"/>
     </div>
+
+    <!---THE GOOD NEWS IS YOU ARE A MORON AND IT ACTUALLY WORKS SO YOU JUST NEED TO BE ABLE TO DO THIS SHIT FOR REAL-->
+
+    <p>Showing <span></span> of: <span></span></p> 
+    <button onclick="openFilters()">Filter</button>
+
+
+    <div id="hiddenElement" style="display: none;">
+        <!-----FIRST CHECKLIST IS TYPE OF RATE-->
+        <div class="Filter">
+        <h5>Type of rate</h5>
+        <p><input type="checkbox" onclick="ShowFixed()"> Fixed</p>
+        <p><input type="checkbox" onclick="ShowVariable()"> Variable</p>
+        </div>
+
+        <!-----FIRST CHECKLIST IS ACCESS TYPE-->
+        <div class="Filter">
+        <h5>Access type</h5>
+        <p><input type="checkbox" onclick="ShowEasyAccess()"> Easy access</p>
+        <p> <input type="checkbox" onclick="ShowLimitedAccess()"> Limited access</p>
+        <p><input type="checkbox" onclick="ShowNoAccess()"> No access</p>
+        </div>
+
+        <!-----FIRST CHECKLIST IS TERM-->
+        <div class="Filter">
+        <h5>Term</h5>
+        <p><input type="checkbox" onclick="Show02Years()"> 0-2 Years</p>
+        <p><input type="checkbox" onclick="Show24Years()"> 2-4 Years</p>
+        <p><input type="checkbox" onclick="ShowNoRestrictions()"> No Restrictions</p>
+        </div>
+
+        <!-----FIRST CHECKLIST IS TAX FREE-->
+        <div class="Filter">
+        <h5>Tax Free</h5>
+        <p><input type="checkbox" onclick="ShowTaxFree()"> Yes</p>
+        <p><input type="checkbox" onclick="Showtaxable()"> No</p>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
     <!--this is the first product------------------------------------------------------------------------------>
-        <div class="productContainer-1">
+        <div class="productContainer-1" id="Junior isa">
 
             <div class="ProductBox firstProductBox-1">
                 
@@ -109,7 +168,7 @@
         </div>
 
         <!----this is the second product------------------------------------------------------------------------>
-        <div class="productContainer-2">
+        <div class="productContainer-2" id="First Home Saver (2)">
 
             <div class="ProductBox firstProductBox-2">
                 
@@ -151,7 +210,7 @@
         </div>
 
         <!----this is the third product------------------------------------------------------------------------>
-        <div class="productContainer-3">
+        <div class="productContainer-3" id="FourAccessIsa">
 
             <div class="ProductBox firstProductBox-3">
                 
@@ -194,7 +253,7 @@
 
             <!----this is the fourth product------------------------------------------------------------------------>
 
-            <div class="productContainer-4">
+            <div class="productContainer-4" id="Four Access Saver (2)">
 
                 <div class="ProductBox firstProductBox-4">
                     
@@ -237,7 +296,7 @@
 
             <!----this is the fifth product------------------------------------------------------------------------>
 
-            <div class="productContainer-5">
+            <div class="productContainer-5" id="Fixed Bond (344) 31.08.2026">
 
                 <div class="ProductBox firstProductBox-5">
                     
@@ -280,7 +339,7 @@
 
             <!----this is the sixth product------------------------------------------------------------------------>
 
-            <div class="productContainer-6">
+            <div class="productContainer-6" id="Easy Access Saver (7)">
 
                 <div class="ProductBox firstProductBox-6">
                     
@@ -320,11 +379,90 @@
                     <p class="ViewAccountButton">View account</p>
                 </div>
             </div>
+            <!---SECTION TO BE USED TO HELP CUSTOMERS FIND ACCOUNTS-->
+            <div class="closedAccountBox">
+                <div class="closedAccountBox-1">
+                    <h2 class="closedAccountBox-1-Text">Can't find your account?</h2>
+                    <P class="closedAccountBox-1-Text-2">It could now be withdrawn. To check your rate, see our closed accounts section.</P>
+                </div>
+                <div class="closedAccountBox-2">
+                    <p class="ViewAccountButton">Closed accounts</p>
+                </div>
+            </div>
+            <!--THIS SECTION IS SUED FOR A WANT HELP SECTION AJND TO ALLOW CUSTOMERS TO CONTACT US-->
+            <div class="helpSection">
+                <div class="helpSection-1">
+                    <h2 class="helpSection-Text">Want help?</h2>
+                    <p class="helpSection-Text-Main">Our help section is bursting with useful information. <br> If you'd rather chat, just give us a call.</p>
+                    <p>Help</p>
+                    <p>Get in touch</p>
+                </div>
+                <div class="helpSection-2">
+                    <h2 class="helpSection-Text">Call us on</h2>
+                    <h1>0800 121 8899</h1>
+                    <div class="callOpeningTimes">
+                        <p class="callOpeningTimes-item">Monday - Friday</p>
+                        <p class="callOpeningTimes-item">8am - 7pm</p>
+                        <p class="callOpeningTimes-item">Saturday</p>
+                        <p class="callOpeningTimes-item">9am - 2pm</p>
+                        <p class="callOpeningTimes-item">Sunday</p>
+                        <p class="callOpeningTimes-item">Closed</p>
+                        <p class="callOpeningTimes-item">Bank holidays</p>
+                        <p class="callOpeningTimes-item">Closed</p>
+
+                    </div>
+                    <p>Yesterday, people waited on average</p>
+                    <p>6 minute 3 seconds for savings enquiries</p>
+                    <p>2 minutes 43 seconds for mortgage enquiries</p>
+                </div>
+                <div class="helpSection-3">
+                    <img src="images/help-contact-us image.png" alt="Contact us image"/>
+                </div>
+            </div>
+
 
 
 
     </body>
-    <footer>
+    <footer class="footerContainer">
+        <div class="footerQuickLinksContainer">
+            <div class="footerQuickLinks-1">
+                <h3>Quick links</h3>
+                <p class="footerQuickLinksContainerLink">Why choose us?</p>
+                <p class="footerQuickLinksContainerLink">What's my rate?</p>
+                <p class="footerQuickLinksContainerLink">Get in touch</p>
+                <p class="footerQuickLinksContainerLink">Fraud and security</p>
+                <p class="footerQuickLinksContainerLink">Careers</p>
+                <p class="footerQuickLinksContainerLink">Intermediaries</p>
+            </div>
+
+            <div class="footerQuickLinks-2">
+                <h3>Organisation</h3>
+                <p class="footerQuickLinksContainerLink">Sustainability</p>
+                <p class="footerQuickLinksContainerLink">Corporate governance</p>
+                <p class="footerQuickLinksContainerLink">Investor relations</p>
+                <p class="footerQuickLinksContainerLink">Modern slavery statement</p>
+                <p class="footerQuickLinksContainerLink">Financial results</p>
+                <p class="footerQuickLinksContainerLink">Suppliers</p>
+            </div>
+
+            <div class="footerQuickLinks-3">
+                <h3>Using our site</h3>
+                <p class="footerQuickLinksContainerLink">Accessibility and wellbeing</p>
+                <p class="footerQuickLinksContainerLink">Privacy</p>
+                <p class="footerQuickLinksContainerLink">Terms of use</p>
+                <p class="footerQuickLinksContainerLink">Media centre</p>
+                <p class="footerQuickLinksContainerLink">Service availability</p>
+            </div>
+            <div><img src="images/fscs-protected-logo.png" alt="fscs protected logo"/> </div>
+        </div>
+        <div>
+            <p class="footerLargeText">Coventry Building Society is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority (firm reference number 150892). Coventry Building Society. Principal Office: Coventry House, Harry Weston Road, Binley, Coventry, West Midlands CV3 2TQ.
+                <br><br>For all enquiries call <strong>0800 121 8899</strong>.<br><br>
+                
+                Calls to 0800 numbers are free when made from the UK. You may be charged for calls to all other numbers, please contact your service provider for further details. We may monitor, record, store and use telephone calls to help improve our service and as a record of our conversation.
+            </p>
+        </div>
         
     </footer>
 </html>
