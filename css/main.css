@@ -1,9 +1,6 @@
 p h1,h2,h3,h4,h5,h6 span{
     font-family: Arial, Helvetica,;
 }
-body{
-    margin: 0px 0px;
-}
 
 .headerSection{
     display: flex;
@@ -95,7 +92,7 @@ div.headerRight div img{
     border-bottom: 0.5px solid grey;
 }
 
-.servicesListItem{
+.servicesList p{
     display: inline-block;
     font-weight: bold;
     border: 5px solid transparent
@@ -110,6 +107,7 @@ div.headerRight div img{
     box-shadow: 0px 0px 10px 3px lightgrey;
     width: 15%;
     height: auto;
+    flex-grow: 0;
 }
 .introBox{
     display: flex;
@@ -130,6 +128,7 @@ div.headerRight div img{
     font-weight: bolder;
     font-size: 2.2em;
     color: rgb(25, 110, 247);
+    flex-shrink: 1;
 }
 /*THIS STUFF IS FOR EACH INDIVIDUAL PRODUCT LINE*/
 /*this is for the first product box after each comment a new product box is made*/
@@ -150,7 +149,9 @@ div.headerRight div img{
     flex-basis: 1;
     padding: 20px;
     text-overflow: wrap;
-    align-items: center;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
     border: solid 1px rgb(234, 239, 254);
     width: 100%;
     box-sizing: border-box;
@@ -280,11 +281,11 @@ div.headerRight div img{
 }
 
 /*Filter css reuqired*/
-.Filter{
-    display: flex;
-    flex-direction: column;
-    padding: 30px 20px;
+.filterSelections{
+    display: none;
 }
+
+
 
 /*CLOSED ACCOUNT SECTION CSS STYLING REUIRED*/
 .closedAccountBox{
@@ -302,7 +303,7 @@ div.headerRight div img{
 .closedAccountBox-1{
     flex-grow: 1;
 }
-.closedAccountBox-1-Text{
+.closedAccountBox-1 h2{
     margin: 10px;
     margin-left: 0px;
     font-weight: bolder;
@@ -332,7 +333,7 @@ div.headerRight div img{
     font-size: 2.2em;
     color: rgb(25, 110, 247);
 }
-.helpSection-Text{
+.helpSection h2{
     font-weight: bolder;
     font-size: 2.2em;
     color: rgb(25, 110, 247);
@@ -359,7 +360,7 @@ div.headerRight div img{
     grid-template-columns: 1fr 1fr;
     align-items: center;
 }
-.callOpeningTimes-item{
+.callOpeningTimes p{
     align-self: center;
     margin: 1% 2%;
 }
@@ -382,13 +383,10 @@ div.headerRight div img{
     align-items:flex-start;
     justify-content: space-around;
 }
-.footerQuickLinksContainerLink{
+.footerQuickLinksContainer p{
     text-decoration: none;
 }
-.footerQuickLinksContainerLink:hover{
+.footerQuickLinksContainer p:hover{
     text-decoration: underline;
     text-decoration-color: white;
 }
-.footerQuickLinks-1{}
-.footerQuickLinks-2{}
-.footerQuickLinks-3{}
