@@ -1,11 +1,11 @@
-<!DOCTYPE html>hhhhhhh
+<!DOCTYPE html>
 <html>
     <head>
         <title>All Savings Savings</title>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="/css/main.css"/>
-        <script href="/JavascriptMain.js"></script>
+        <script src="/javascript/JavascriptMain.js"></script>
     </head>
     <body style="width: 100%; margin: 0px 0px;">
         <header>
@@ -64,9 +64,26 @@
 
         </div>
         <img class="fscsImage" src="/images/image copy 2.png" alt="Fscs protection logo"/>
+    </div> 
+
+    <div>
+        <button onclick="ShowFilters()">filters</button>
+        <div id="filterOptions" class="HiddenContentStatus">
+            <div>
+            <p><input type="radio" name="FilterOption" id="noAccessFilter"> NO ACCESS</p>
+            <p><input type="radio" name="FilterOption" id="limitedAccessFilter"> LIMITED ACCESS</p>
+            <p><input type="radio" name="FilterOption" id="easyAccessFilter"> EASY ACCESS</p>
+            <p><input type="radio" name="FilterOption" id="taxFreeFilter"> Tax-free</p>
+            <p><input type="radio" name="FilterOption" id="notTaxFreeFilter"> NOT TAX FREE</p>
+            </div>
+            <button>RESET filter</button>
+            <button onclick="SubmitFilter()">apply filter</button>
+
+        </div>
     </div>
+
     <!--this is the first product------------------------------------------------------------------------------>
-        <div class="productContainer-1">
+        <div class="productContainerVisible" id="young_saver">
 
             <div class="ProductBox firstProductBox-1">
                 
@@ -109,7 +126,7 @@
         </div>
 
         <!----this is the second product------------------------------------------------------------------------>
-        <div class="productContainer-2">
+        <div class="productContainerVisible" id="first_home_saver">
 
             <div class="ProductBox firstProductBox-2">
                 
@@ -151,7 +168,7 @@
         </div>
 
         <!----this is the third product------------------------------------------------------------------------>
-        <div class="productContainer-3">
+        <div class="productContainerVisible" id="four_access_isa">
 
             <div class="ProductBox firstProductBox-3">
                 
@@ -194,7 +211,7 @@
 
             <!----this is the fourth product------------------------------------------------------------------------>
 
-            <div class="productContainer-4">
+            <div class="productContainerVisible" id="four_access_saver">
 
                 <div class="ProductBox firstProductBox-4">
                     
@@ -237,7 +254,7 @@
 
             <!----this is the fifth product------------------------------------------------------------------------>
 
-            <div class="productContainer-5">
+            <div class="productContainerVisible" id="fixed_bond">
 
                 <div class="ProductBox firstProductBox-5">
                     
@@ -280,7 +297,7 @@
 
             <!----this is the sixth product------------------------------------------------------------------------>
 
-            <div class="productContainer-6">
+            <div class="productContainerVisible" id="easy_access_saver">
 
                 <div class="ProductBox firstProductBox-6">
                     
