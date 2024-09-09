@@ -131,12 +131,14 @@ div.headerRight div img{
     flex-shrink: 1;
 }
 /*THIS STUFF IS FOR EACH INDIVIDUAL PRODUCT LINE*/
-/*this is for the first product box after each comment a new product box is made*/
-.productContainer-1{
+
+/*THIS STUFF WORKS WITH THE FILTER SYSTEM DONT CHANGE UNLESS GIVEN AUTHORISATION*/
+
+.productContainerVisible{
     display: inline-flex;
     flex-direction: row;
     align-content: center;
-    margin: 5px 10%;
+    margin: 30px 10%;
     justify-content: space-evenly;
     flex-grow: 0;
     max-height: fit-content;
@@ -145,6 +147,11 @@ div.headerRight div img{
     border-radius: 22px;
     width: 80%;
 }
+.productContainerInvisible{
+    display: none;
+}
+
+/*this is for the first product box after each comment a new product box is made*/
 .ProductBox{
     flex-basis: 1;
     padding: 20px;
@@ -180,19 +187,6 @@ div.headerRight div img{
     border-top-left-radius: 22px;
 }
 /*---------product 2--------------------------------------------------*/
-.productContainer-2{
-    display: inline-flex;
-    flex-direction: row;
-    align-content: center;
-    margin: 30px 10%;
-    justify-content: space-evenly;
-    flex-grow: 0;
-    max-height: fit-content;
-    border:solid 0.5px rgb(234, 239, 254);
-    box-shadow: -2px 2px 9px 15px rgb(211, 211, 211);
-    border-radius: 22px;
-    width: 80%;
-}
 .firstProductBox-2{
     background-color:#73e5db ;
     color: black;
@@ -200,19 +194,7 @@ div.headerRight div img{
     border-top-left-radius: 22px;
 }
 /*---------product 3--------------------------------------------------*/
-.productContainer-3{
-    display: inline-flex;
-    flex-direction: row;
-    align-content: center;
-    margin: 30px 10%;
-    justify-content: space-evenly;
-    flex-grow: 0;
-    max-height: fit-content;
-    border:solid 0.5px rgb(234, 239, 254);
-    box-shadow: -2px 2px 9px 15px rgb(211, 211, 211);
-    border-radius: 22px;
-    width: 80%;
-}
+
 .firstProductBox-3{
     background-color: rgb(240, 207, 76) ;
     color: black;
@@ -220,19 +202,7 @@ div.headerRight div img{
     border-top-left-radius: 22px;
 }
 /*---------product 4--------------------------------------------------*/
-.productContainer-4{
-    display: inline-flex;
-    flex-direction: row;
-    align-content: center;
-    margin: 30px 10%;
-    justify-content: space-evenly;
-    flex-grow: 0;
-    max-height: fit-content;
-    border:solid 0.5px rgb(234, 239, 254);
-    box-shadow: -2px 2px 9px 15px rgb(211, 211, 211);
-    border-radius: 22px;
-    width: 80%;
-}
+
 .firstProductBox-4{
     background-color: rgb(57, 191, 135) ;
     color: black;
@@ -240,19 +210,6 @@ div.headerRight div img{
     border-top-left-radius: 22px;
 }
 /*---------product 5--------------------------------------------------*/
-.productContainer-5{
-    display: inline-flex;
-    flex-direction: row;
-    align-content: center;
-    margin: 30px 10%;
-    justify-content: space-evenly;
-    flex-grow: 0;
-    max-height: fit-content;
-    border:solid 0.5px rgb(234, 239, 254);
-    box-shadow: -2px 2px 9px 15px rgb(211, 211, 211);
-    border-radius: 22px;
-    width: 80%;
-}
 .firstProductBox-5{
     background-color:  rgb(255, 133, 147) ;
     color: black;
@@ -260,19 +217,6 @@ div.headerRight div img{
     border-top-left-radius: 22px;
 }
 /*---------product 6--------------------------------------------------*/
-.productContainer-6{
-    display: inline-flex;
-    flex-direction: row;
-    align-content: center;
-    margin: 30px 10%;
-    justify-content: space-evenly;
-    flex-grow: 0;
-    max-height: fit-content;
-    border:solid 0.5px rgb(234, 239, 254);
-    box-shadow: -2px 2px 9px 15px rgb(211, 211, 211);
-    border-radius: 22px;
-    width: 80%;
-}
 .firstProductBox-6{
     background-color:  rgb(164, 161, 255);
     color: black;
@@ -389,4 +333,14 @@ div.headerRight div img{
 .footerQuickLinksContainer p:hover{
     text-decoration: underline;
     text-decoration-color: white;
+}
+.HiddenFilters{
+
+}
+
+.HiddenContentStatus{
+    display: none;
+}
+.visibleContentStatus{
+    display: flex;
 }
