@@ -92,7 +92,7 @@ div.headerRight div img{
     border-bottom: 0.5px solid grey;
 }
 
-.servicesListItem{
+.servicesList p{
     display: inline-block;
     font-weight: bold;
     border: 5px solid transparent
@@ -107,6 +107,7 @@ div.headerRight div img{
     box-shadow: 0px 0px 10px 3px lightgrey;
     width: 15%;
     height: auto;
+    flex-grow: 0;
 }
 .introBox{
     display: flex;
@@ -127,6 +128,7 @@ div.headerRight div img{
     font-weight: bolder;
     font-size: 2.2em;
     color: rgb(25, 110, 247);
+    flex-shrink: 1;
 }
 /*THIS STUFF IS FOR EACH INDIVIDUAL PRODUCT LINE*/
 /*this is for the first product box after each comment a new product box is made*/
@@ -147,7 +149,9 @@ div.headerRight div img{
     flex-basis: 1;
     padding: 20px;
     text-overflow: wrap;
-    align-items: center;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
     border: solid 1px rgb(234, 239, 254);
     width: 100%;
     box-sizing: border-box;
@@ -279,4 +283,110 @@ div.headerRight div img{
 /*Filter css reuqired*/
 .filterSelections{
     display: none;
+}
+
+
+
+/*CLOSED ACCOUNT SECTION CSS STYLING REUIRED*/
+.closedAccountBox{
+    display: flex;
+    flex-flow: row nowrap;
+    max-width: 80%;
+    margin: 5% 10%;
+    align-items: center;
+    border:solid 0.5px rgb(234, 239, 254);
+    box-shadow: -2px 2px 9px 15px rgb(211, 211, 211);
+    border-radius: 22px;
+    padding: 39.375px;
+    justify-content: space-between;
+}
+.closedAccountBox-1{
+    flex-grow: 1;
+}
+.closedAccountBox-1 h2{
+    margin: 10px;
+    margin-left: 0px;
+    font-weight: bolder;
+    font-size: 2.2em;
+    color: rgb(25, 110, 247);
+}
+/*WANT HELP AND CALL US SECTION*/
+.helpSection{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    border-top:solid 0.5px rgb(234, 239, 254);
+    border-bottom: solid 0.5px rgb(234, 239, 254);
+    border-left: none;
+    border-right: none;
+    box-shadow: -2px 2px 9px 15px rgb(211, 211, 211);
+
+}
+.helpSection-Headers{
+    font-weight: bolder;
+    font-size: 2.2em;
+    color: rgb(25, 110, 247);
+}
+.helpSection h2{
+    font-weight: bolder;
+    font-size: 2.2em;
+    color: rgb(25, 110, 247);
+    margin-top: 0px;
+}
+.helpSection-Text-Main{
+    font-size: 27px;
+    font-weight: bolder;
+}
+.helpSection-1{
+    margin-top: 0px;
+}
+.helpSection-2{
+    margin-top: 0px;
+    height: 10%;
+}
+.helpSection-3{
+    margin-top: 0px;
+    height: 10%;
+}
+/*WANT HELP AND CALL US SECTION PHONE OPENIGN TIMES USING GRID*/
+.callOpeningTimes{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+.callOpeningTimes p{
+    align-self: center;
+    margin: 1% 2%;
+}
+/*THIS SECVTION WILL BE ON THE FOOTER*/
+.footerContainer{
+    background-color:  rgb(0, 31, 69);
+    color: white;
+    padding-bottom: 30px;
+}
+.footerLargeText{
+    display: inline-block;
+    padding: 25px 50px;
+    max-width: 50%;
+}
+.footerQuickLinksContainer{
+    display:flex;
+    margin-top: 25px;
+    margin: 0px;
+    max-width: 100%;
+    align-items:flex-start;
+    justify-content: space-around;
+}
+.footerQuickLinksContainer p{
+    text-decoration: none;
+}
+.footerQuickLinksContainer p:hover{
+    text-decoration: underline;
+    text-decoration-color: white;
 }
