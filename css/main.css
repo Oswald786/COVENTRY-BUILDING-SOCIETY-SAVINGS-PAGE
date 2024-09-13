@@ -334,13 +334,30 @@ div.headerRight div img{
     text-decoration: underline;
     text-decoration-color: white;
 }
-.HiddenFilters{
 
+/*THIS FILTER IS FOR YOUR SECTION TO USE FOR FILTER STYLING*/
+.FilterSectionStyling{
+    margin: 45px 10%;
+    width: 80%;
+    border-top:solid 0.5px rgb(234, 239, 254);
+    border-bottom: solid 0.5px rgb(234, 239, 254);
+    border-left: none;
+    border-right: none;
+    box-shadow: -2px 2px 9px 15px rgb(211, 211, 211);
+    border-radius: 22px;
 }
-
-.HiddenContentStatus{
-    display: none;
-}
-.visibleContentStatus{
+.filterStyle{
     display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 25px;
+}
+.filterButton{
+    padding: 45px;
+    font-size: x-large;
+    border-radius: 20px;
+    background-color: rgb(25, 110, 247);
+    font-weight: 700;
+    color: white;
+    
 }

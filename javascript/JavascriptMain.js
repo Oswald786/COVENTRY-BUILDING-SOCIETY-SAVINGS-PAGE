@@ -1,16 +1,25 @@
 
 function ShowFilters(){
-filterOptions = document.getElementById("filterOptions");
-filterOptions.classList.replace('HiddenContentStatus','visibleContentStatus')
-console.log("class Replaced")
+let elementinquestion = document.getElementById("filterOptions");
+const elementCss = window.getComputedStyle(elementinquestion);
+
+let elementCssStatus = elementCss.getPropertyValue("display");
+console.log(elementCssStatus)
+
+if(elementCssStatus == "none"){
+    elementinquestion.style.display = "flex"
+    console.log("the filter options are now visible")
+}
+if(elementCssStatus == "flex"){
+    elementinquestion.style.display = "none"
+    console.log("the filters are now hidden")
+}
+
+
+
+
 }
 function ResetFilter(){
-    young_saver = document.getElementById("young_saver");
-    first_home_saver = document.getElementById("first_home_saver");
-    four_access_isa = document.getElementById("four_access_isa");
-    four_access_saver = document.getElementById("four_access_saver");
-    fixed_bond = document.getElementById("fixed_bond");
-    easy_access_saver = document.getElementById("easy_access_saver");
    
     accountSection = document.getElementById("ProductsAvailible")
     accountsAvailible = accountSection.getElementsByClassName("productContainerVisible")
@@ -29,13 +38,6 @@ function ResetFilter(){
 }
 
 function SubmitFilter(){
-
-noaccess = document.getElementById("no-access");
-limitedaccess = document.getElementById("limited-access");
-easyaccess = document.getElementById("easy-access");
-taxfree = document.getElementById("tax-free");
-nottaxfree = document.getElementById("not-tax-free");
-
 filters = document.getElementById("filterCheckboxes")
 checkboxes = filters.getElementsByTagName("input")
 
@@ -71,13 +73,6 @@ for(i = 0; i < checkboxes.length; i++){
 }
 
 function ShowNoAccess(){
- young_saver = document.getElementById("young_saver");
- first_home_saver = document.getElementById("first_home_saver");
- four_access_isa = document.getElementById("four_access_isa");
- four_access_saver = document.getElementById("four_access_saver");
- fixed_bond = document.getElementById("fixed_bond");
- easy_access_saver = document.getElementById("easy_access_saver");
-
  accountSection = document.getElementById("ProductsAvailible")
  accountsAvailible = accountSection.getElementsByClassName("productContainerVisible")
 
@@ -94,13 +89,6 @@ function ShowNoAccess(){
 }
 
 function ShowLimitedAccessGroup() {
- young_saver = document.getElementById("young_saver");
- first_home_saver = document.getElementById("first_home_saver");
- four_access_isa = document.getElementById("four_access_isa");
- four_access_saver = document.getElementById("four_access_saver");
- fixed_bond = document.getElementById("fixed_bond");
- easy_access_saver = document.getElementById("easy_access_saver");
-
  accountSection = document.getElementById("ProductsAvailible")
  accountsAvailible = accountSection.getElementsByClassName("productContainerVisible")
 
@@ -120,12 +108,6 @@ function ShowLimitedAccessGroup() {
 }
 }
 function ShowEasyAccessGroup() {
-    young_saver = document.getElementById("young_saver");
-    first_home_saver = document.getElementById("first_home_saver");
-    four_access_isa = document.getElementById("four_access_isa");
-    four_access_saver = document.getElementById("four_access_saver");
-    fixed_bond = document.getElementById("fixed_bond");
-    easy_access_saver = document.getElementById("easy_access_saver");
    
     accountSection = document.getElementById("ProductsAvailible")
     accountsAvailible = accountSection.getElementsByClassName("productContainerVisible")
@@ -143,12 +125,6 @@ function ShowEasyAccessGroup() {
 
 }
 function ShowTaxFreeGroup() {
-    young_saver = document.getElementById("young_saver");
- first_home_saver = document.getElementById("first_home_saver");
- four_access_isa = document.getElementById("four_access_isa");
- four_access_saver = document.getElementById("four_access_saver");
- fixed_bond = document.getElementById("fixed_bond");
- easy_access_saver = document.getElementById("easy_access_saver");
 
  accountSection = document.getElementById("ProductsAvailible")
  accountsAvailible = accountSection.getElementsByClassName("productContainerVisible")
@@ -166,12 +142,6 @@ function ShowTaxFreeGroup() {
  
 }
 function ShowNotTaxFreeGroup() {
-    young_saver = document.getElementById("young_saver");
-    first_home_saver = document.getElementById("first_home_saver");
-    four_access_isa = document.getElementById("four_access_isa");
-    four_access_saver = document.getElementById("four_access_saver");
-    fixed_bond = document.getElementById("fixed_bond");
-    easy_access_saver = document.getElementById("easy_access_saver");
    
     accountSection = document.getElementById("ProductsAvailible")
     accountsAvailible = accountSection.getElementsByClassName("productContainerVisible")
