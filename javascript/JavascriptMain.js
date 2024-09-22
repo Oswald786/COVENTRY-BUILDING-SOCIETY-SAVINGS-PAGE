@@ -158,3 +158,27 @@ function ShowNotTaxFreeGroup() {
    }
 
 }
+
+function ShowInterestEarned() {
+    initialInvestment = parsefloat(document.getElementById("Initial-Investment").value);
+    monthlyContribution = parsefloat(document.getElementById("Monthly-contribution").value);
+    intrestRate = parsefloat(document.getElementById("Intrest-Rate").value);
+    investmentTermYears = parseInt(document.getElementById("investment-term-Years").value);
+    investmentTermMonths = parseInt(document.getElementById("investment-term-months").value);
+
+    funds = document.getElementById("funds");
+
+    YearsMaturing = 12 * investmentTermYears;
+    totalMaturingTerm = YearsMaturing + investmentTermMonths;
+    funds = 0 + initialInvestment;
+    termTotal = 0;
+
+    while (termTotal < totalMaturingTerm) {
+        funds += monthlyContribution;
+        intrestEarned = funds * ((intrestRate / 100) / 12);
+        funds += intrestEarned;
+        console.log(funds);
+        termTotal += 1;
+
+    }
+}
