@@ -352,22 +352,24 @@
 
 
     <div class="intrest-cal-Section">
-        <form>
+        
             <div id="Required-information-fields">
                 <p>Initial Investment</p>
-                <input type="number" id="Initial-Investment">
+                <input type="number" id="Initial-Investment" min="0">
                 <p>Monthly contribution</p>
-                <input type="number" id="Monthly-contribution">
+                <input type="number" id="Monthly-contribution" min="0">
                 <p>Intrest Rate</p>
-                <input type="text" id="Intrest-Rate">
+                <input type="number" id="Intrest-Rate" min="0">
                 <p>investment term Years</p>
-                <input type="number" id="investment-term-Years">
+                <input type="number" id="investment-term-Years" min="0">
                 <p>investment term months</p>
-                <input type="number" id="investment-term-months">
+                <input type="number" id="investment-term-months" min="0">
                 <button onclick="ShowInterestEarned()">Begin Calculation</button>
             </div>
-        </form>
-        <p id="funds"></p>
+        <div class="Results">
+        <h1>The Return</h1>
+        <p id="funds" class="ResultsText"></p>
+        </div>
 
     </div>
 
